@@ -5,15 +5,25 @@
   
 
   
-  <title>卡卡札记</title>
+  <title>基于BERT多语言的NER应用  --  卡卡札记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="卡卡札记">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="NER: 命名实体识别 – Named-entity recognition命名实体识别（Named Entity Recognition，简称NER），又称作“专名识别”，是指识别文本中具有特定意义的实体，主要包括__人名、地名、机构名、专有名词__等。简单的讲，就是识别自然文本中的__实体__和__类别__。 常用的NER算法很多， LSTM\HMM\CRF等一系列算法， 各自都可以获得不错的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于BERT多语言的NER应用">
+<meta property="og:url" content="http://yoursite.com/2020/09/09/BERT_NER_CN_EN/index.html">
 <meta property="og:site_name" content="卡卡札记">
+<meta property="og:description" content="NER: 命名实体识别 – Named-entity recognition命名实体识别（Named Entity Recognition，简称NER），又称作“专名识别”，是指识别文本中具有特定意义的实体，主要包括__人名、地名、机构名、专有名词__等。简单的讲，就是识别自然文本中的__实体__和__类别__。 常用的NER算法很多， LSTM\HMM\CRF等一系列算法， 各自都可以获得不错的">
 <meta property="og:locale">
+<meta property="og:image" content="http://yoursite.com/2020/09/09/BERT_NER_CN_EN/0.png">
+<meta property="og:image" content="http://yoursite.com/2020/09/09/BERT_NER_CN_EN/1.png">
+<meta property="article:published_time" content="2020-09-09T08:45:15.045Z">
+<meta property="article:modified_time" content="2020-09-10T08:53:42.447Z">
 <meta property="article:author" content="vincent leung">
+<meta property="article:tag" content="NER">
+<meta property="article:tag" content="自然语言处理">
+<meta property="article:tag" content="BERT">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/09/09/BERT_NER_CN_EN/0.png">
   
     <link rel="alternate" href="/" title="卡卡札记" type="application/atom+xml">
   
@@ -71,9 +81,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-BERT_NER_CN_EN" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-BERT_NER_CN_EN" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/09/BERT_NER_CN_EN/" class="article-date">
   <time datetime="2020-09-09T08:45:15.045Z" itemprop="datePublished">2020-09-09</time>
@@ -90,8 +98,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/09/BERT_NER_CN_EN/">基于BERT多语言的NER应用</a>
+    <h1 class="article-title" itemprop="name">
+      基于BERT多语言的NER应用
     </h1>
   
 
@@ -228,219 +236,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-微软认知服务(Cognitive Services) 实体识别" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/08/27/%E5%BE%AE%E8%BD%AF%E8%AE%A4%E7%9F%A5%E6%9C%8D%E5%8A%A1(Cognitive%20Services)%20%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB/" class="article-date">
-  <time datetime="2020-08-27T05:34:57.826Z" itemprop="datePublished">2020-08-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/technology/">technology</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/27/%E5%BE%AE%E8%BD%AF%E8%AE%A4%E7%9F%A5%E6%9C%8D%E5%8A%A1(Cognitive%20Services)%20%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB/">微软认知服务</a>
-    </h1>
+    <a href="/2020/08/27/%E5%BE%AE%E8%BD%AF%E8%AE%A4%E7%9F%A5%E6%9C%8D%E5%8A%A1(Cognitive%20Services)%20%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">微软认知服务</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>微软Azure推出的一系列<a target="_blank" rel="noopener" href="https://azure.microsoft.com/zh-cn/services/cognitive-services/">认知服务</a>, 其中文本分析功能包括实体识别(NER),情感分析,关键短语抽取, 语言检测等一系列功能。</p>
-<p>这里简单测试一下其相关功能。</p>
-<p>相关服务：</p>
-<ul>
-<li>NER： <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-entity-linking?tabs=version-3">命名实体识别</a> </li>
-<li>语言检测:  检测文本的语言</li>
-<li>关键短语提取： Key-phrase extraction</li>
-<li>情感分析：sentiment analysis</li>
-</ul>
-<h1 id="注册微软Azure服务"><a href="#注册微软Azure服务" class="headerlink" title="注册微软Azure服务"></a>注册微软Azure服务</h1><p>这里有微软账号的也需要开通Azure服务，初级使用者可以免费使用部分服务：<a target="_blank" rel="noopener" href="https://azure.microsoft.com/zh-cn/free/">注册入口</a></p>
-<p>注册完毕登录后， 通过<a target="_blank" rel="noopener" href="https://portal.azure.com/#home">门户</a> 进入认知服务：</p>
-<img src="/2020/08/27/%E5%BE%AE%E8%BD%AF%E8%AE%A4%E7%9F%A5%E6%9C%8D%E5%8A%A1(Cognitive%20Services)%20%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB/0.png" class="">
-
-
-<h1 id="获取API-Key-amp-End-Point"><a href="#获取API-Key-amp-End-Point" class="headerlink" title="获取API Key &amp; End Point"></a>获取API Key &amp; End Point</h1><h2 id="创建文本分析的资源（Text-Analysis-Resource"><a href="#创建文本分析的资源（Text-Analysis-Resource" class="headerlink" title="创建文本分析的资源（Text  Analysis Resource)"></a>创建文本分析的资源（Text  Analysis Resource)</h2><p>在认知服务面板点击Add按钮，在market place面板搜索text analysis后，选择创建（Create）： </p>
-<img src="/2020/08/27/%E5%BE%AE%E8%BD%AF%E8%AE%A4%E7%9F%A5%E6%9C%8D%E5%8A%A1(Cognitive%20Services)%20%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB/1.png" class="">
-
-<p>后续步骤按部就班填完资料， 收费计划选择免费的F0即可， 微软提供一个月5000免费额度。</p>
-<h2 id="获取API-Key-和-End-Point"><a href="#获取API-Key-和-End-Point" class="headerlink" title="获取API Key 和 End Point"></a>获取API Key 和 End Point</h2><p>点击创建完的resource，进入资源面板后选择Keys and Endpoint:</p>
-<img src="/2020/08/27/%E5%BE%AE%E8%BD%AF%E8%AE%A4%E7%9F%A5%E6%9C%8D%E5%8A%A1(Cognitive%20Services)%20%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB/2.png" class="">
-
-<p>一共有2个Key， 任意一个都可以使用， 后续直接调用Endpoint+service即可使用文本分析各个功能。</p>
-<h1 id="测试服务"><a href="#测试服务" class="headerlink" title="测试服务"></a>测试服务</h1><h2 id="语言检测：language-detect"><a href="#语言检测：language-detect" class="headerlink" title="语言检测：language detect"></a>语言检测：language detect</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># key &amp; endpoint</span></span><br><span class="line">key1=<span class="string">&quot;*****************************&quot;</span></span><br><span class="line">endpoint=<span class="string">&quot;https://xxxxx.cognitiveservices.azure.com/&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># key &amp; endpoint</span></span><br><span class="line">key1=<span class="string">&quot;842408cbfac54f5d9d54e6d82096aa75&quot;</span></span><br><span class="line">endpoint=<span class="string">&quot;https://upsbrief.cognitiveservices.azure.com/&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="comment"># pprint is used to format the JSON response</span></span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">subscription_key = key1</span><br><span class="line">language_api_url = endpoint + <span class="string">&quot;/text/analytics/v3.0/languages&quot;</span></span><br><span class="line">documents = &#123;<span class="string">&quot;documents&quot;</span>: [</span><br><span class="line">    &#123;<span class="string">&quot;id&quot;</span>: <span class="string">&quot;1&quot;</span>, <span class="string">&quot;text&quot;</span>: <span class="string">&quot;This is a document written in English.&quot;</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;id&quot;</span>: <span class="string">&quot;2&quot;</span>, <span class="string">&quot;text&quot;</span>: <span class="string">&quot;Este es un document escrito en Español.&quot;</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&quot;id&quot;</span>: <span class="string">&quot;3&quot;</span>, <span class="string">&quot;text&quot;</span>: <span class="string">&quot;这是一个用中文写的文件&quot;</span>&#125;</span><br><span class="line">]&#125;</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">&quot;Ocp-Apim-Subscription-Key&quot;</span>: subscription_key&#125;</span><br><span class="line">response = requests.post(language_api_url, headers=headers, json=documents)</span><br><span class="line">languages = response.json()</span><br><span class="line">pprint(languages)</span><br></pre></td></tr></table></figure>
-
-<pre><code>&#123;&#39;documents&#39;: [&#123;&#39;detectedLanguage&#39;: &#123;&#39;confidenceScore&#39;: 1.0,
-                                     &#39;iso6391Name&#39;: &#39;en&#39;,
-                                     &#39;name&#39;: &#39;English&#39;&#125;,
-                &#39;id&#39;: &#39;1&#39;,
-                &#39;warnings&#39;: []&#125;,
-               &#123;&#39;detectedLanguage&#39;: &#123;&#39;confidenceScore&#39;: 1.0,
-                                     &#39;iso6391Name&#39;: &#39;es&#39;,
-                                     &#39;name&#39;: &#39;Spanish&#39;&#125;,
-                &#39;id&#39;: &#39;2&#39;,
-                &#39;warnings&#39;: []&#125;,
-               &#123;&#39;detectedLanguage&#39;: &#123;&#39;confidenceScore&#39;: 1.0,
-                                     &#39;iso6391Name&#39;: &#39;zh_chs&#39;,
-                                     &#39;name&#39;: &#39;Chinese_Simplified&#39;&#125;,
-                &#39;id&#39;: &#39;3&#39;,
-                &#39;warnings&#39;: []&#125;],
- &#39;errors&#39;: [],
- &#39;modelVersion&#39;: &#39;2020-07-01&#39;&#125;</code></pre>
-<p>从结果来看， 这语言检测对大公司来说就是小菜一碟， 没啥挑战性。</p>
-<p>下面试试其他服务： </p>
-<h2 id="NER："><a href="#NER：" class="headerlink" title="NER："></a>NER：</h2><p>实体识别是个经典的文本分析应用，目前很多算法模型都能做到85%~95%的准确率（看分类的数目和语言）。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">entities_url = endpoint + <span class="string">&quot;/text/analytics/v3.1-preview.1/entities/recognition/pii&quot;</span></span><br><span class="line"></span><br><span class="line">text = <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">WeChat Official Accounts appear in the chat list of WeChat along with all your other contact messages. </span></span><br><span class="line"><span class="string">Users can open the official account to access customized information through the bottom menu interface.</span></span><br><span class="line"><span class="string">Push notifications are messages that pop up on the user’s chat and show up </span></span><br><span class="line"><span class="string">at any time when the official account sends a message.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">documents = &#123;<span class="string">&quot;documents&quot;</span>: [</span><br><span class="line">    &#123;<span class="string">&quot;id&quot;</span>: <span class="string">&quot;1&quot;</span>,<span class="string">&quot;language&quot;</span>:<span class="string">&quot;en&quot;</span>, <span class="string">&quot;text&quot;</span>: text&#125;</span><br><span class="line">]&#125;</span><br><span class="line">headers = &#123;<span class="string">&quot;Ocp-Apim-Subscription-Key&quot;</span>: subscription_key&#125;</span><br><span class="line">response = requests.post(entities_url, headers=headers, json=documents)</span><br><span class="line">entities = response.json()</span><br><span class="line">pprint(entities)</span><br></pre></td></tr></table></figure>
-
-<pre><code>&#123;&#39;documents&#39;: [&#123;&#39;entities&#39;: [&#123;&#39;category&#39;: &#39;Person&#39;,
-                              &#39;confidenceScore&#39;: 0.28,
-                              &#39;length&#39;: 6,
-                              &#39;offset&#39;: 53,
-                              &#39;text&#39;: &#39;WeChat&#39;&#125;],
-                &#39;id&#39;: &#39;1&#39;,
-                &#39;warnings&#39;: []&#125;],
- &#39;errors&#39;: [],
- &#39;modelVersion&#39;: &#39;2020-07-01&#39;&#125;</code></pre>
-<p>它把WeChat识别成了Person（人名），从这结果看来，微软的NER算法并不是很理想， 或者其背后的预料训练不够充分， 要知道NER对语料要求也很高的。</p>
-<p>也有可能对于中文的翻译的文本不熟悉， 下面换成wiki的apple简介， 摘取两段试试：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">entities_url = endpoint + <span class="string">&quot;/text/analytics/v3.1-preview.1/entities/recognition/pii&quot;</span></span><br><span class="line"></span><br><span class="line">text = <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Apple Inc. is an American multinational technology company headquartered in Cupertino, California,</span></span><br><span class="line"><span class="string">that designs, develops, and sells consumer electronics, </span></span><br><span class="line"><span class="string">computer software, and online services. </span></span><br><span class="line"><span class="string">It is considered one of the Big Tech technology companies, </span></span><br><span class="line"><span class="string">alongside Amazon, Google, Microsoft, and Facebook. </span></span><br><span class="line"><span class="string">Apple was founded by Steve Jobs, Steve Wozniak, and Ronald Wayne in April 1976 to develop and sell</span></span><br><span class="line"><span class="string">Wozniak&#x27;s Apple I personal computer, though Wayne sold his share back within 12 days. &#x27;&#x27;&#x27;</span></span><br><span class="line">documents = &#123;<span class="string">&quot;documents&quot;</span>: [</span><br><span class="line">    &#123;<span class="string">&quot;id&quot;</span>: <span class="string">&quot;1&quot;</span>,<span class="string">&quot;language&quot;</span>:<span class="string">&quot;en&quot;</span>, <span class="string">&quot;text&quot;</span>: text&#125;</span><br><span class="line">]&#125;</span><br><span class="line">headers = &#123;<span class="string">&quot;Ocp-Apim-Subscription-Key&quot;</span>: subscription_key&#125;</span><br><span class="line">response = requests.post(entities_url, headers=headers, json=documents)</span><br><span class="line">entities = response.json()</span><br><span class="line">pprint(entities)</span><br></pre></td></tr></table></figure>
-
-<pre><code>&#123;&#39;documents&#39;: [&#123;&#39;entities&#39;: [&#123;&#39;category&#39;: &#39;Organization&#39;,
-                              &#39;confidenceScore&#39;: 0.92,
-                              &#39;length&#39;: 10,
-                              &#39;offset&#39;: 1,
-                              &#39;text&#39;: &#39;Apple Inc.&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Organization&#39;,
-                              &#39;confidenceScore&#39;: 0.71,
-                              &#39;length&#39;: 8,
-                              &#39;offset&#39;: 226,
-                              &#39;text&#39;: &#39;Big Tech&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Organization&#39;,
-                              &#39;confidenceScore&#39;: 0.91,
-                              &#39;length&#39;: 6,
-                              &#39;offset&#39;: 268,
-                              &#39;text&#39;: &#39;Amazon&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Organization&#39;,
-                              &#39;confidenceScore&#39;: 0.93,
-                              &#39;length&#39;: 6,
-                              &#39;offset&#39;: 276,
-                              &#39;text&#39;: &#39;Google&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Organization&#39;,
-                              &#39;confidenceScore&#39;: 0.94,
-                              &#39;length&#39;: 9,
-                              &#39;offset&#39;: 284,
-                              &#39;text&#39;: &#39;Microsoft&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Organization&#39;,
-                              &#39;confidenceScore&#39;: 0.91,
-                              &#39;length&#39;: 16,
-                              &#39;offset&#39;: 299,
-                              &#39;text&#39;: &#39;Facebook.、\nApple&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Person&#39;,
-                              &#39;confidenceScore&#39;: 0.77,
-                              &#39;length&#39;: 10,
-                              &#39;offset&#39;: 331,
-                              &#39;text&#39;: &#39;Steve Jobs&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Person&#39;,
-                              &#39;confidenceScore&#39;: 0.9,
-                              &#39;length&#39;: 13,
-                              &#39;offset&#39;: 343,
-                              &#39;text&#39;: &#39;Steve Wozniak&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Person&#39;,
-                              &#39;confidenceScore&#39;: 0.85,
-                              &#39;length&#39;: 12,
-                              &#39;offset&#39;: 362,
-                              &#39;text&#39;: &#39;Ronald Wayne&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Person&#39;,
-                              &#39;confidenceScore&#39;: 0.58,
-                              &#39;length&#39;: 7,
-                              &#39;offset&#39;: 409,
-                              &#39;text&#39;: &#39;Wozniak&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Organization&#39;,
-                              &#39;confidenceScore&#39;: 0.44,
-                              &#39;length&#39;: 5,
-                              &#39;offset&#39;: 419,
-                              &#39;text&#39;: &#39;Apple&#39;&#125;,
-                             &#123;&#39;category&#39;: &#39;Person&#39;,
-                              &#39;confidenceScore&#39;: 0.83,
-                              &#39;length&#39;: 5,
-                              &#39;offset&#39;: 453,
-                              &#39;text&#39;: &#39;Wayne&#39;&#125;],
-                &#39;id&#39;: &#39;1&#39;,
-                &#39;warnings&#39;: []&#125;],
- &#39;errors&#39;: [],
- &#39;modelVersion&#39;: &#39;2020-07-01&#39;&#125;</code></pre>
-<p>这次对于Person和Organization的识别还算准确， 但还是暴露了几个问题： </p>
-<ul>
-<li>对于地点貌似直接省略了，比如Cupertino, California， 很多NER服务会直接给出Place或者Location的分类。</li>
-<li>文本处理不够干净， 比如{‘category’: ‘Organization’,…’text’: ‘Facebook.、\nApple’}, 当然清理文本不应该是NER处理的事情， 只不过作为API最基本的参数清理感觉还是很有必要的， 特别是换行空格之类的规范化， 对于NER的各种坑应该也是一种预防手段。</li>
-<li>分类属于最基本的几种， 没有深入细分。</li>
-</ul>
-<p>对于NER的英文测试， 只能说微软的算法表现非常一般。</p>
-<p>下面测试中文：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">entities_url = endpoint + <span class="string">&quot;/text/analytics/v3.1-preview.1/entities/recognition/pii&quot;</span></span><br><span class="line"></span><br><span class="line">text = <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">微软 表示在 重大更新 之后并非所有人都清楚具体在哪些方面有所改进，甚至有很大一部分人不清楚如何启用新功能和改进。</span></span><br><span class="line"><span class="string">这意味着在系统更新之后引入的新功能，可能无法给用户带来真正的好处。为此，微软希望进行改变。&#x27;&#x27;&#x27;</span></span><br><span class="line">documents = &#123;<span class="string">&quot;documents&quot;</span>: [</span><br><span class="line">    &#123;<span class="string">&quot;id&quot;</span>: <span class="string">&quot;1&quot;</span>,<span class="string">&quot;language&quot;</span>:<span class="string">&quot;zh_chs&quot;</span>, <span class="string">&quot;text&quot;</span>: text&#125;</span><br><span class="line">]&#125;</span><br><span class="line">headers = &#123;<span class="string">&quot;Ocp-Apim-Subscription-Key&quot;</span>: subscription_key&#125;</span><br><span class="line">response = requests.post(entities_url, headers=headers, json=documents)</span><br><span class="line">entities = response.json()</span><br><span class="line">pprint(entities)</span><br></pre></td></tr></table></figure>
-
-<pre><code>&#123;&#39;documents&#39;: [],
- &#39;errors&#39;: [&#123;&#39;error&#39;: &#123;&#39;code&#39;: &#39;InvalidArgument&#39;,
-                       &#39;innererror&#39;: &#123;&#39;code&#39;: &#39;UnsupportedLanguageCode&#39;,
-                                      &#39;message&#39;: &#39;Invalid language code. &#39;
-                                                 &#39;Supported languages: en&#39;&#125;,
-                       &#39;message&#39;: &#39;Invalid Language Code.&#39;&#125;,
-             &#39;id&#39;: &#39;1&#39;&#125;],
- &#39;modelVersion&#39;: &#39;2020-07-01&#39;&#125;</code></pre>
-<p>好吧， 微软认知服务的文本分析， NER功能直接不支持中文， 仅仅支持英文。</p>
-<p>到了这里感觉无需进一步测试了，简单总结一下：</p>
-<p>微软的文本分析模块算法，功能性能都非常一般。不过这一贯都是微软的策略， 无论微软研究院多么前瞻的技术， 在实际的产品中都会以最保守的方式呈现给用户。</p>
-<p>归纳一下优缺点:</p>
-<ul>
-<li><p>优点：</p>
-<ul>
-<li>免费试用（5000额度一个月），为数不多能想到的优点</li>
-</ul>
-</li>
-<li><p>缺点：</p>
-<ul>
-<li>高级功能不支持多语言，感觉更像一款玩具而不是一个产品</li>
-<li>部署稍微繁琐，各种创建资源</li>
-<li>功能保守， 比如NER只有最基本的Person 和Organization (Location?). 不像很多基金的平台，提供二级甚至多级的分类</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/08/27/%E5%BE%AE%E8%BD%AF%E8%AE%A4%E7%9F%A5%E6%9C%8D%E5%8A%A1(Cognitive%20Services)%20%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB/" data-id="ckev4vgid0001k4uoehpwa2m9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NER/" rel="tag">NER</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NLP/" rel="tag">NLP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E8%BD%AFAzure/" rel="tag">微软Azure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/" rel="tag">自然语言处理</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
